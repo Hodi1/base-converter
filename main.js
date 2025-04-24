@@ -1,3 +1,5 @@
+/*Hodaya Hasan 206451965 Talya Zazon 325269645*/
+
 let fromBase = null;
 let toBase = null;
 
@@ -44,17 +46,15 @@ function validateInput(input, base) {
   return true;
 }
 
-
 document.getElementById('boxnum').addEventListener('input', () => {
   const input = document.getElementById('boxnum').value.trim();
 
   if (!fromBase) {
-    return;  
+    return;
   }
 
-  
   if (!validateInput(input, baseMap[fromBase])) {
-    document.getElementById('RESULTE').innerHTML = `<h4 style="color:red;"> error:the input is incorrect to the base ${fromBase}</h4>`;
+    document.getElementById('RESULTE').innerHTML = `<h4 style="color:red;">Error: the input is incorrect for base ${fromBase}</h4>`;
   } else {
     document.getElementById('RESULTE').innerHTML = `<h4>RESULT:</h4>`;
   }
@@ -64,12 +64,24 @@ document.querySelector('.Convert').addEventListener('click', () => {
   const input = document.getElementById('boxnum').value.trim();
 
   if (!fromBase || !toBase) {
-    alert("choose base base FROM and TO");
+    alert("Choose both FROM and TO bases.");
     return;
   }
 
-  const number = parseInt(input, baseMap[fromBase]);
-  const result = number.toString(baseMap[toBase]).toUpperCase();
 
-  document.getElementById('RESULTE').innerHTML = `<h4>RESULTE: ${result}</h4>`;
+  const decimalValue = parseInt(input, baseMap[fromBase]);
+
+  let result;
+  if (toBase === "BinaryTO") {
+    result = decimalValue.toString(2);
+  } else if (toBase === "DecimalTO") {
+    result = decimalValue.toString(10); 
+  } else if (toBase === "OctalTO") {
+    result = decimalValue.toString(8); 
+  } else if (toBase === "HexTO") {
+    result = decimalValue.toString(16).toUpperCase(); 
+  }
+
+ 
+  document.getElementById('RESULTE').innerHTML = `<h4>RESULT: ${result}</h4>`;
 });
