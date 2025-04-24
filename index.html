@@ -1,3 +1,4 @@
+/*Hodaya Hasan 206451965 Talya Zazon 325269645*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,41 +6,48 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Base Converter</title>
-    </head>
+</head>
 
-    <body>
-       <div id="title">
-        <h1> Base Converter </h1>
-        <p>Convert numbers between differnet bases (Binary, Decimal, Hex, Octal)</p>
-        </div>
-         <div id="FROM"><h4>FROM:</h4></div>
-<div class="buttons">
-  <button id="Binary" class="box" onclick="selectFrom('Binary')"><h5>Binary</h5></button>
-  <button id="Decimal" class="box" onclick="selectFrom('Decimal')"><h5>Decimal</h5></button>
-  <button id="Octal" class="box" onclick="selectFrom('Octal')"><h5>Octal</h5></button>
-  <button id="Hex" class="box"onclick="selectFrom('Hex')"><h5>Hex</h5></button>
-</div>
+<body>
+    <div id="title">
+        <h1>Base Converter</h1>
+        <p>Convert numbers between different bases (Binary, Decimal, Hex, Octal)</p>
+    </div>
 
-<div class="number">
-    <div id="textnum"><p>Enter a number:</p></div>
-    <input id="boxnum" class="inputBox" type="text" />
-  </div>
+    <div id="FROM">
+        <h4>FROM:</h4>
+    </div>
+    <div class="buttons">
+        <button id="Binary" class="box" onclick="selectFrom('Binary')"><h5>Binary</h5></button>
+        <button id="Decimal" class="box" onclick="selectFrom('Decimal')"><h5>Decimal</h5></button>
+        <button id="Octal" class="box" onclick="selectFrom('Octal')"><h5>Octal</h5></button>
+        <button id="Hex" class="box" onclick="selectFrom('Hex')"><h5>Hex</h5></button>
+    </div>
 
-<div id="TO"><h4>TO:</h4></div>
-<div class="buttons">
-  <button id="TOBinary" class="box" onclick="selectTo('TOBinary')"> <h5>Binary</h5> </button>
-  <button id="TODecimal" class="box" onclick="selectTo('TODecimal')"><h5>Decimal</h5></button>
-  <button id="TOOctal" class="box" onclick="selectTo('TOOctal')"><h5>Octal</h5></button>
-  <button id="TOHex" class="box"onclick="selectTo('TOHex')"><h5>Hex</h5></button>
-</div>
+    <div class="number">
+        <div id="textnum"><p>Enter a number:</p></div>
+        <input id="boxnum" class="inputBox" type="text" />
+    </div>
 
-<div class="container">
-  <button class="Convert"><h5>Convert</h5></button>
-</div>
+    <div id="TO">
+        <h4>TO:</h4>
+    </div>
+    <div class="buttons">
+        <button id="BinaryTO" class="box" onclick="selectTo('BinaryTO')"><h5>Binary</h5></button>
+        <button id="DecimalTO" class="box" onclick="selectTo('DecimalTO')"><h5>Decimal</h5></button>
+        <button id="OctalTO" class="box" onclick="selectTo('OctalTO')"><h5>Octal</h5></button>
+        <button id="HexTO" class="box" onclick="selectTo('HexTO')"><h5>Hex</h5></button>
+    </div>
 
-<div class="container">
-  <div id="RESULTE"><h4>RESULTE:</h4></div>
-</div>
-<script src="main.js"></script>
+    <div class="container">
+        <button class="Convert"><h5>Convert</h5></button>
+    </div>
+
+    <div class="container">
+        <div id="RESULTE"><h4>RESULT:</h4></div>
+    </div>
+    <script src="main.js"></script>
 
 </body>
+
+</html>
